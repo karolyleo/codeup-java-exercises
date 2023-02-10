@@ -118,14 +118,41 @@ public class ControlFlowExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Let's convert a number grade into a Letter Grade!\nWhat number grade would you like to convert? ");
         int userNum = Integer.parseInt(scanner.next());
-        if(userNum <= 100 && userNum >= 88 ) {
-            System.out.println('A');
+
+        if(userNum > 100 || userNum < 0) {
+            System.out.println(userNum + " is an invalid grade.");
+        } else if (userNum >= 88 ) {
+
+            if (userNum > 94) {
+                System.out.println("A+");
+            } else {
+                System.out.println("A-");
+            }
+
         } else if (userNum >= 80) {
-            System.out.println('B');
+
+            if (userNum > 84) {
+                System.out.println("B+");
+            } else {
+                System.out.println("B-");
+            }
+
         } else if ( userNum >= 67 ){
-            System.out.println('C');
+
+            if (userNum > 74) {
+                System.out.println("C+");
+            } else {
+                System.out.println("C-");
+            }
+
         } else if ( userNum >= 60 ){
-            System.out.println('D');
+
+            if (userNum > 64) {
+                System.out.println("D+");
+            } else {
+                System.out.println("D-");
+            }
+
         } else {
             System.out.println('F');
         }

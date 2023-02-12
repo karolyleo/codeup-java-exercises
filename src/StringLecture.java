@@ -1,7 +1,10 @@
 public class StringLecture {
 
     public static void main(String[] args) {
-
+//        String fruit = "apple";
+//        String favFruit = "apple";
+//        Boolean answer = fruit.equals(favFruit);
+//        System.out.println(answer);
 //        .equals(String anotherString)
 
 //         String one = "1";
@@ -32,7 +35,7 @@ public class StringLecture {
 //        String travisParkAddress = "311 E Travis St, San Antonio, TX 78205";
 //        String codeUpZip = "78205";
 //        boolean sameZipAsCodeup = travisParkAddress.trim().endsWith(codeUpZip);
-        //
+//
 //        System.out.println(sameZipAsCodeup);
 
 
@@ -41,9 +44,9 @@ public class StringLecture {
 
 //        boolean firstLetterCapitalized = false;
 //        String word = "test";
-//
+////
 //        char firstLetter = word.charAt(0);
-// //
+//// //
 //        if (firstLetter == Character.toUpperCase(firstLetter)) {
 //            firstLetterCapitalized = true;
 //        }
@@ -54,7 +57,7 @@ public class StringLecture {
 //        .indexOf(String subString)
 
 //         String cat = "cat";
-//         System.out.println(cat.indexOf("z"));
+//         System.out.println(cat.indexOf("a"));
 
 
 
@@ -72,10 +75,12 @@ public class StringLecture {
 
 //        .replace(char oldChar, char newChar)
 
-//         String search = "tiny cats looking cute cats";
-//         String parsedSearch = search.replace("cats", "dogs");
-//         System.out.println(parsedSearch);
-
+         String search = "tiny cats looking cute cats";
+         String parsedSearch = search.replace("cats", "dogs");
+         System.out.println(parsedSearch);
+/**
+ * Left of here for the practice string questions
+ */
 
 //        .substring(int beginIndex[, int endIndex])
 

@@ -1,9 +1,6 @@
 public class StringLecture {
 
     public static void main(String[] args) {
-//        String fruit = "apple";
-//        String favFruit = "apple";
-//        Boolean answer = fruit.equals(favFruit);
 //        System.out.println(answer);
 //        .equals(String anotherString)
 
@@ -75,11 +72,11 @@ public class StringLecture {
 
 //        .replace(char oldChar, char newChar)
 
-         String search = "tiny cats looking cute cats";
-         String parsedSearch = search.replace("cats", "dogs");
-         System.out.println(parsedSearch);
+//         String search = "tiny cats looking cute cats";
+//         String parsedSearch = search.replace("cats", "dogs");
+//         System.out.println(parsedSearch);
 /**
- * Left of here for the practice string questions
+ * Left off here for the practice string questions
  */
 
 //        .substring(int beginIndex[, int endIndex])

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.lang.Math;
 public class MethodsExercises {
     //    This is used for calling and testing out the methods that I am creating
     public static void main(String[] args) {
@@ -18,9 +18,11 @@ public class MethodsExercises {
 //            System.out.printf("%s is a great number!%n", getInteger(first, second));
 //            System.out.println("What's your name?");
 //            String name = sc.nextLine();
-            sayName("Leo");
-            sayName("Leo", "K-pop");
+//            sayName("Leo");
+//            sayName("Leo", "K-pop");
 //        }
+//        factorial(getInteger(1, 10));
+        dice();
     }
 
     //    Doing the plus operation
@@ -87,5 +89,71 @@ public class MethodsExercises {
     }
     public static void sayName(String first, String second){
         System.out.printf("Hi %s %s%n", first, second);
+    }
+    /**
+     * Calculate the factorial of a number.
+     *
+     * Prompt the user to enter an integer from 1 to 10.
+     * Display the factorial of the number entered by the user.
+     * Ask if the user wants to continue.
+     * Use a for loop to calculate the factorial.
+     * Assume that the user will enter an integer, but verify it’s between 1 and 10.
+     * Use the long type to store the factorial.
+     * Continue only if the user agrees to.
+     * A factorial is a number multiplied by each of the numbers before it.
+     * Factorials are denoted by the exclamation point (n!).
+     *          Ex:
+     * 1! = 1               = 1
+     * 2! = 1 x 2           = 2
+     * 3! = 1 x 2 x 3       = 6
+     * 4! = 1 x 2 x 3 x 4   = 24
+     */
+    public static void factorial(int userNum) {
+        int result = userNum;
+        String helper = String.format("%n%d! = ", userNum);
+        for (int i = 1; i < userNum; i++) {
+            result *= i;
+            helper += String.format("%d x ", i);
+        }
+        helper += String.format("%d = %d%n", userNum, result);
+        System.out.print(helper);
+    }
+    /**
+     * Ask the user to enter the number of sides for a pair of dice.
+     * Prompt the user to roll the dice.
+     * "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+     * Use static methods to implement the method(s) that generate the random numbers.
+     * Use the .random method of the java.lang.Math class to generate random numbers.
+     */
+    public static void dice(){
+        Scanner sc = new Scanner(System.in);
+        boolean keepRunning = true;
+        while(keepRunning) {
+            //Step 1: Prompt the user to choose a number of sides for the dice and then roll
+            int sides = sideCounter();
+
+            System.out.println("Press enter to roll the dice:");
+            sc.nextLine(); // Wait for user input
+
+            //Step 2: Roll the two dice (i.e. randomize each roll for n-sides)
+            int firstRoll = randomizer(sides);
+            int secondRoll = randomizer(sides);
+            System.out.printf("The Dice rolled a %d and a %d%n", firstRoll, secondRoll);
+
+            //Step 3: Ask user if they would like to roll again
+            System.out.println("Would you like to keep going? [ y / N ]");
+            String response = sc.next();
+            keepRunning = response.equals("y");
+        }
+    }
+
+    public static Integer sideCounter(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pick a number of side for our dice: ");
+        Integer sides = sc.nextInt();
+        return sides;
+    }
+    public static Integer randomizer(int maxSides){
+        return (int) (Math.random() * (maxSides)) + 1;
     }
 }

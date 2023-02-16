@@ -3,22 +3,29 @@ import util.Input;
 
 public class MoviesApplication {
     public static void main(String[] args) {
-        Input input = new Input();
+
         boolean run = true;
         Movie[] movies = MoviesArray.findAll();
         do {
-            intro();
-            int response = input.getInt(0, 5);
-            if(response == 1) { // Reveals all movies
-                showMovies(movies);
+//            intro();
+            int response = intro();
+            if(response == 1 || response == 6) { // Reveals all movies
+                if ((response == 1)) {
+                    showMovies(movies);
+                } else {
+                    movies = addMovie(movies, newMovie());
+                    showMovies(movies);
+                }
             } else if (response != 0) {
                 filteredMovies(movies, category(response));
             }
             run = keepGoing(response); //Updates on a global scale
         } while(run);
     }
-    public static void intro(){
-        System.out.println("What would you like to do?\n0 - exit\n1 - view all movies\n2 - view movies in the animated category\n3 - view movies in the drama category\n4 - view movies in the horror category\n5 - view movies in the scifi category");
+    public static int intro(){
+        Input input = new Input();
+        System.out.println("What would you like to do?\n0 - exit\n1 - view all movies\n2 - view movies in the animated category\n3 - view movies in the drama category\n4 - view movies in the horror category\n5 - view movies in the scifi category\n6 - add a movie");
+        return input.getInt(0, 6);
     }
     public static Boolean keepGoing(int response) { // Does the EXIT
         return response != 0;
@@ -54,6 +61,24 @@ public class MoviesApplication {
             System.out.printf(" %10s |  %s%n", movie.getCategory(), movie.getName());
         }
         System.out.println("------End------");
+    }
+    public static Movie newMovie(){
+        Input input = new Input();
+        System.out.println("What is the title of your new movie?");
+        String title = input.getString();
+        System.out.println("What is the category of your movie?");
+        String category = input.getString();
+        Movie result = new Movie(title, category);
+        return result;
+    }
+    //Bonus: Add Movie~
+    public static Movie[] addMovie(Movie[] movies, Movie newMovie) {
+        Movie[] result = new Movie[movies.length + 1];
+        for(int i = 0; i < movies.length; i++){
+            result[i] = movies[i];
+        }
+        result[movies.length] = newMovie;
+        return result;
     }
 }
 /** Create a class named MoviesApplication that has a main method.

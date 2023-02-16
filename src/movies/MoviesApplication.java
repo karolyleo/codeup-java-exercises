@@ -3,19 +3,15 @@ import util.Input;
 
 public class MoviesApplication {
     public static void main(String[] args) {
-
         boolean run = true;
         Movie[] movies = MoviesArray.findAll();
         do {
-//            intro();
             int response = intro();
-            if(response == 1 || response == 6) { // Reveals all movies
-                if ((response == 1)) {
-                    showMovies(movies);
-                } else {
-                    movies = addMovie(movies, newMovie());
-                    showMovies(movies);
-                }
+            if(response == 1) { // Reveals all movies
+                showMovies(movies);
+            } else if(response == 6){ //Bonus of adding a movie
+                movies = addMovie(movies, newMovie());
+                showMovies(movies);
             } else if (response != 0) {
                 filteredMovies(movies, category(response));
             }

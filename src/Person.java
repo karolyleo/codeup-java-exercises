@@ -29,6 +29,7 @@ public class Person {
         /**
          * Here is question : ~Understanding references~
          */
+
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
 //        System.out.println(person1.getName().equals(person2.getName())); //Checks name val

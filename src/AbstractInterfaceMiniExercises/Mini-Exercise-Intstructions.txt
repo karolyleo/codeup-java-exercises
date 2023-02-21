@@ -1,0 +1,45 @@
+================================= ABSTRACT CLASS MINI-EXERCISE
+-- PART 1 --    Consider a library. In the library, there are various forms of media accessible to the public. A patron of a library can access
+newspapers, books, microfiche, magazines, records, cds, etc.
+Create a Media abstract class
+  Identify at least one process that can be done the same way for each form of media. Add a public
+  void instance method named after this thing and give it a message to print out a simple description of this process.
+  Identify at least one process that be done for each form of media but requires a unique approach / implementation for each specific
+  sub-type of media. Create an abstract method that defines method signature for this process but does not include the method body.
+Extend from Media with one of the above listed sub-types of media
+  Include an implementation (method body) of the abstract method created in the Media class
+BONUS: identify and add another abstract method to the Media class and extend the Media class in additional sub-types
+-- PART 2
+Car
+  on()
+  off()
+  moveForward(int distanceInMeters)
+  getCurrentLatLng()
+  demolish()
+Plane
+  on()
+  off()
+  getCurrentLatLng()
+  demolish()
+Bicycle
+  getCurrentLatLng()
+  demolish()
+What methods make the most sense to include in a PowerControllable interface?
+What methods make the most sense to include in an abstract Vehicle class?
+What class(s) should implement the PowerControllable interface?
+What methods in the abstract class should be abstract? What methods are general to all sub-types? (edited)
+
+================================= INTERFACE MINI EXERCISE
+Consider the library scenerio from the previous mini-exercise.
+Consider the following abstract class: Person
+Person could be extended in these sub-types
+  Librarian
+  Archivist
+  Patron
+  Researcher
+  etc.
+Between Media and Person, what are some common interfaces that may exist? In other words, what are some things that can be done with or done to both Media and Person? Yet another way of considering the relationship between these two ideas: in what ways can you interact with
+both a Person and form of Media in a library the same way?
+For each shared aspect/way to interface with/interact with, create an interface. Define methods (no implementation) that one could expect
+to do when interfacing with both a Person and a form of Media.
+BONUS: consider the abstract class LibraryFurniture. What are additional interfaces or previously created interfaces that may be implemented by a LibraryFurniture class?

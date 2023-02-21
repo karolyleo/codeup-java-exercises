@@ -1,6 +1,6 @@
-package shapes;
+//package shapes;
 
-public class Square extends Rectangle{
+//public class Square extends Rectangle {
 //    public int side;
 //    public Square(int side) {
 //        super(side, side);
@@ -22,7 +22,7 @@ public class Square extends Rectangle{
      *  * perimeter = 4 x side
      *  * area = side ^ 2
      */
-}
+//}
 /**
  * Create a class named Square, also inside of shapes, that extends Rectangle. Square should define a constructor that accepts one argument, side, and calls the parent's constructor to set both the length and width to the value of side.
  */

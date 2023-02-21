@@ -3,9 +3,9 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args) {
         Rectangle box1 = new Rectangle(5, 4); //Rectangle(length, width)
-        System.out.printf("The perimeter is: %f%nThe area is: %f%n", box1.getPerimeter(), box1.getArea());
-//        Rectangle box2 = new Square(5);
-//        System.out.printf("The perimeter is: %d%nThe area is: %d%n", box2.perimeter(), box2.area());
+        System.out.printf("The perimeter is: %.1f%nThe area is: %.1f%n", box1.getPerimeter(), box1.getArea());
+        Square box2 = new Square(9);
+        System.out.printf("The perimeter is: %.1f%nThe area is: %.1f%n", box2.getPerimeter(), box2.getArea());
 //        Square box3 = new Square(5);
 //        System.out.println(box3.side);
     }

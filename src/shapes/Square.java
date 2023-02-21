@@ -1,22 +1,22 @@
 package shapes;
 
 public class Square extends Rectangle{
-    public int side;
-    public Square(int side) {
-        super(side, side);
-        this.side = side;
-    }
-
-    @Override
-    public int perimeter() {
-        System.out.print("I am a square--- ");
-        return 4 * side;
-    }
-
-    @Override
-    public int area() {
-        return side * side;
-    }
+//    public int side;
+//    public Square(int side) {
+//        super(side, side);
+//        this.side = side;
+//    }
+//
+//    @Override
+//    public int perimeter() {
+//        System.out.print("I am a square--- ");
+//        return 4 * side;
+//    }
+//
+//    @Override
+//    public int area() {
+//        return side * side;
+//    }
     /**
      * In the Square class, override the getArea and getPerimeter methods with the following definitions for a square
      *  * perimeter = 4 x side

@@ -13,6 +13,9 @@ public class Student {
     public String getName(){
         return name;
     }
+    public ArrayList<Integer> getArr(){
+        return grades;
+    }
     public void addGrade(int grade){
         grades.add(grade);
     }

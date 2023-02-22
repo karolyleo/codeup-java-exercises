@@ -11,7 +11,7 @@ public class StudentTest {
         while(stopIt){
             person.addGrade(user.getInt(0,100));
             System.out.printf("%s has an average grade of %.2f%nKeep adding grades?%n", person.getName(),person.getGradeAverage());
-//            System.out.println("");
+            System.out.print(person.getArr());
             stopIt = user.yesNo();
             if(stopIt) System.out.println("What was their latest grade?");
         }

@@ -1,19 +1,34 @@
 package managerCLIAssignment;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import static java.nio.file.Files.createDirectories;
-
 public class Contacts {
-    public static void main(String[] args) {
-        Path fileName = Paths.get(fileName());
+    public static void main(String[] args) throws Exception {
+        Path contacts = createFile();
+        editFile(contacts);
     }
-    public static String fileName() throws Exception {
+    public static Path createFile() throws Exception {
         String contacts = "contact.txt";
-        Path Files.createDirectories(contacts);
+        String directory = "src/managerCLIAssignment";
+        Path fileLocation;
+        Path fileName = Paths.get(directory, contacts);
+        try {
+            Path directoryCreation = Files.createDirectories(fileName);
+            fileLocation = Files.createDirectories(fileName);
+            System.out.println(fileLocation);
+        } catch (IOException e){
+            System.out.println(e);
+        }
+        return fileName;
+    }
+    public static Path editFile(Path location) throws Exception {
+
     }
 }
+
 /**
  * Contacts Manager CLI1 Application
  *
